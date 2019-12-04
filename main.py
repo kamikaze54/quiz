@@ -1,4 +1,4 @@
-﻿import csv
+import csv
 points = 0
 with open('quis.csv') as myFile:
   reader = csv.reader(myFile, delimiter=';')
@@ -7,7 +7,6 @@ with open('quis.csv') as myFile:
     data = dict(Вопрос=row[0],a=row[1],b=row[2],c=row[3])
     print(data)
     right = dict(righ=row[4])
-    print(right)
     answer = str(input('Введите ответ на вопрос: '))
     if data.get(answer)  == right.get('righ'):
       points = points + 5
